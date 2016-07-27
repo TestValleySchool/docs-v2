@@ -128,7 +128,7 @@ function slug_get_spaceship( $object, $field_name, $request ) {
  * @return bool|int
  */
 function slug_update_spaceship( $value, $object, $field_name ) {
-    if ( ! $value || ! is_string( $value ) ) {
+    if ( ! isset( $value ) || ! is_string( $value ) || strlen( $value ) < 1 ) {
         return;
     }
 
